@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>testpage</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+
+<style>
+body {
+	margin: 0;
+    overflow: hidden;
+    background: black;
+    font-family: 'Pathway Gothic One', sans-serif;
+
+    display: flex;
+    justify-content: center; /* hz */
+    align-items: center;     /* vl */
+    height: 100vh;
+
+	}
+
+	.stars {
+		position: fixed;
+    	width: 100%;
+    	height: 100%;
+    	background: black url('https://www.transparenttextures.com/patterns/stardust.png');
+	}
+
+	.texto {
+		font-size: 50px;
+		color: #feda4a;
+		text-align: justify;
+		width: 60%;
+		position: relative;
+    	z-index: 1;
+    	text-align: center;
+
+	}
+
+	[contenteditable="true"]:focus {
+    outline: none;
+	}
+
+	[contenteditable="true"]:focus {
+    outline: none;
+    text-shadow: 0 0 5px #feda4a;
+	}
+
+	/*too much*/
+
+	.panel {
+    position: relative;
+    display: inline-block;
+	}
+
+	.boton {
+	background: black;
+	color: #feda4a;
+	border: 0.5px solid #feda4a;
+
+    padding: 12px 20px;
+    cursor: pointer;
+
+    font-family: monospace;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 1px;
+    transition: 0.3s;
+    box-shadow:
+        0 0 5px #feda4a,
+        0 0 10px #feda4a;
+	}
+
+	.contenido {
+    display: none;
+
+    position: absolute;
+    top: 50px;
+    left: 0;
+
+    background: #feda4a;
+    padding: 10px;
+    border-radius: 8px;
+
+    z-index: 100;
+	}
+
+	.panel:hover .contenido {
+    display: block;
+	}
+
+	.cart {
+		position: absolute;
+		top: 100px;
+		left: 50px;
+	}
+
+	.cart2 {
+		position: absolute;
+		top: 540px;
+		left: 50px;
+	}
+
+	.texcart {
+		position: absolute;
+		top: 390px;
+		left: -280px;
+	}
+
+	.cart4 {
+		position: absolute;
+		top: 560px;
+		right: 50px;
+	}
+
+	.img3d{
+    	width:130px;
+    	transition:0.5s;
+	}
+
+	.img3d:hover{
+    	transform:
+        perspective(800px)
+        rotateY(25deg)
+        rotateX(10deg)
+        scale(1.1);
+
+    	filter: brightness(1.2);
+	}
+
+</style>
+</head>
+<body>
+	<div class="stars"></div>
+
+	<div class="texto">
+		<div id="edit" contenteditable="true" title="ContentEditable" onclick="this.innerText=''" spellcheck="false">
+		</div>
+	</div>	
+	
+	<div class="panel cart">
+		<button id="editBtn" class="boton" title="una pista">ROMPE!</button>
+		<div class="contenido">
+			<img src="img/box.png" width="250px">
+		</div>
+	</div>
+	
+	<div class="texto texcart">
+		<div contenteditable="true" oninput="this.style.color = 'hsl(' + Math.random()*360 + ',100%,70%)'">
+			<p>
+			Discotexto
+			</p>
+		</div>
+	</div>	
+
+	<div class="panel cart2">
+		<button class="boton">LUCES <b>↑</b></button>
+		<div class="contenido">
+			<img src="img/colores.png">
+		</div>
+	</div>
+
+	<div class="img3d cart4">
+		<img src="img/brujoCE.png" width="120px" title="← htpps://"><a href=""></a>
+	</div>
+
+	<script>
+// Un poquito JavaScript (me hace renegar mucho)		
+const el = document.getElementById("edit");
+
+// El getItem carga lo anterior (sino mal recuerdo, ja!)
+el.innerHTML = localStorage.getItem("miTexto") || "ContentEditable";
+
+// Y el setItem lo guarda ;)
+el.addEventListener("input", () => {
+
+    localStorage.setItem("miTexto", el.innerHTML);
+});
+
+// Pa'que se aviven:
+const btn = document.getElementById("editBtn");
+let editando = false;
+
+btn.addEventListener("click", () => {
+	editando = !editando;
+
+    document.body.contentEditable = editando;
+
+    if(editando){
+        document.body.classList.add("editando");
+        btn.textContent = "Desactivar!";
+    }else{
+        document.body.classList.remove("editando");
+        btn.textContent = "Caos!";
+    }
+});
+
+</script>
+
+</body>
+</html>
