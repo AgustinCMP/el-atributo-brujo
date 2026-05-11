@@ -33,7 +33,7 @@ seleccionar, borrar, pegar; interpretar eventos y un largo etc. (sin pogramar ca
 
  _Mientras **C**ontent **E**ditable esta en el html podemos realizar unos cammbios básicos desde Css:  
 usando el selector y la pseudoclase (como se observa abajo en el ejemplo)  
-logramos quitar el borde de selección impuesto por los navegadores._⬇️​  
+logramos quitar el borde de selección impuesto por los navegadores._ ⬇️​  
 ```css
 [contenteditable="true"]:focus {
   outline: none;
