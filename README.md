@@ -131,19 +131,19 @@ formato raro, podemos utilizar "solo texto plano":_
 > scripts de mas funciones, de mayor estructura, es casi infinito.  
 
 Realmente pareciera que **CE** es algo simple, pequeño, pero asi como uno  
-resalta lo poderoso que lo vuelve **JS**, también es justo repetir por tercera  
-vez, todo lo que por si solo permite...  
-Suena naif para algunos expertos, pero permitir que una imagen tipo presentacion  
-se vuelva editable, y con ello se incluye el uso de CSS, es algo sensacional.  
+resalta lo poderoso que lo vuelve **JS**, también es justo repetir, por vez no sé  
+cuánta, todo lo que por si solo permite...  
+Quizás parezca algo normal para expertos en frontend, pero permitir que una imagen tipo presentacion  
+se vuelva editable, y con ello se incluya el uso de CSS, es algo sensacional.  
 Ni hablar de los saltos de línea automáticos, ni de cuando al estar activado  
 el navegador nos permite pegar casi cualquier elemento, y todas las funciones  
 propias de une editor a gran escala; y auque algunos navegadores limiten sus  
 capacidades, también se puede usar atajos (shortcuts), tener múltiples zonas de edición  
-crear falsos placeholders, crear limites de caracteres; y múltiples combinaciones...  
+crear falsos placeholders, crear limites de caracteres; e incontables combinaciones...  
 
 ---
 
-> _La cantidad de veces que habrán nombrado a este atributo (brujo) durante los años
+> _La cantidad de veces que habrán nombrado a este atributo durante los años
 > y ni hablar del sinfín de ejemplos y tantísimo más, seguramente es incalculable.
 > Pero hoy, así como hace muchos años me ayudó, y hoy lo volvió hacer, me pareció
 > una buena idea dedicarle un repositorio (que probablemete existan varios)_ 
